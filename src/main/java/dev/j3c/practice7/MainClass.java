@@ -24,7 +24,7 @@ public class MainClass {
     }
 
     public static void main(String[] args) {
-        Double number = null;
+        Double number;
         do {
             number = MainClass.inputNumber();
         } while(number == null || !MainClass.isValid(number));
