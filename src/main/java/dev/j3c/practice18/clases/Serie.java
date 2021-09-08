@@ -1,6 +1,8 @@
 package dev.j3c.practice18.clases;
 
-public class Serie {
+import dev.j3c.practice18.interfaces.Entregable;
+
+public class Serie implements Entregable {
     //atributos son título, numero de temporadas, entregado, género y creador.
     //Por defecto, el número de temporadas es de 3 temporadas y entregado false.
     //El resto de atributos serán valores por defecto según el tipo del atributo.
@@ -71,5 +73,30 @@ public class Serie {
                 ", genero='" + genero +
                 ", creador='" + creador +
                 ']';
+    }
+
+    @Override
+    public void devolver() {
+        this.entregado = true;
+    }
+
+    @Override
+    public boolean isEntregado() {
+        return this.entregado;
+    }
+
+    @Override
+    public Integer compareTo(Object a) {
+        Integer resultado = null;
+        if(a instanceof Videojuego) {
+            if(this.numTemporadas > ((Videojuego) a).getHorasEstimadas()) {
+                resultado = 1;
+            } else if(this.numTemporadas == ((Serie) a).getNumTemporadas()) {
+                resultado = 0;
+            } else {
+                resultado = -1;
+            }
+        }
+        return resultado;
     }
 }

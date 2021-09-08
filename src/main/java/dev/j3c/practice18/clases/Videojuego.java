@@ -1,6 +1,8 @@
 package dev.j3c.practice18.clases;
 
-public class Videojuego {
+import dev.j3c.practice18.interfaces.Entregable;
+
+public class Videojuego implements Entregable {
     //▪ Sus atributos son titulo, horas estimadas, entregado, genero y compañia.
     //▪ Por defecto, las horas estimadas serán de 10 horas y entregado false. El resto de
     //    atributos serán valores por defecto según el tipo del atributo.
@@ -78,5 +80,30 @@ public class Videojuego {
                 ", genero='" + genero + '\'' +
                 ", compania='" + compania + '\'' +
                 ']';
+    }
+
+    @Override
+    public void devolver() {
+        this.entregado = true;
+    }
+
+    @Override
+    public boolean isEntregado() {
+        return this.entregado;
+    }
+
+    @Override
+    public Integer compareTo(Object a) {
+        Integer resultado = null;
+        if(a instanceof Serie) {
+            if(this.horasEstimadas > ((Serie) a).getNumTemporadas()) {
+                resultado = 1;
+            } else if(this.horasEstimadas == ((Serie) a).getNumTemporadas()) {
+                resultado = 0;
+            } else {
+                resultado = -1;
+            }
+        }
+        return resultado;
     }
 }

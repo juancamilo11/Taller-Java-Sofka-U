@@ -11,5 +11,5 @@ public interface Entregable {
 
     void devolver();
     boolean isEntregado();
-    int compareTo(Object a);
+    Integer compareTo(Object a);
 }
