@@ -1,4 +1,4 @@
-package dev.j3c.practice16;
+package dev.j3c.practice16.clases;
 
 public class Persona {
 

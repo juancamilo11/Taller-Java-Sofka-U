@@ -1,11 +1,11 @@
-package dev.j3c.practice16;
+package dev.j3c.practice16.utilidades;
 
 import javax.swing.*;
 import java.util.InputMismatchException;
 
 public class Utilidades {
 
-    static String inputAndValidateName() {
+    public static String inputAndValidateName() {
         String nombre;
         do{
             nombre = JOptionPane.showInputDialog("Ingrese el nombre: ");
@@ -13,7 +13,7 @@ public class Utilidades {
         return nombre;
     }
 
-    static int ingresarYValidarEdad() {
+    public static int ingresarYValidarEdad() {
         Integer edad = null;   //Wrapper class (Autoboxing operation)
         do {
             try {
@@ -27,7 +27,7 @@ public class Utilidades {
         return(edad);
     }
 
-    static char inputAndValidateGender() {
+    public static char inputAndValidateGender() {
         Character genero = null;   //Wrapper class (Autoboxing operation)
         do {
             try {
@@ -41,7 +41,7 @@ public class Utilidades {
         return(genero);
     }
 
-    static double ingresarYValidarDecimal(String title) {
+    public static double ingresarYValidarDecimal(String title) {
         Double pesoOEstatura = null;   //Wrapper class (Autoboxing operation)
         do {
             try {

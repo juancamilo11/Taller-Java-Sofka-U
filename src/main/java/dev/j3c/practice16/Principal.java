@@ -1,5 +1,8 @@
 package dev.j3c.practice16;
 
+import dev.j3c.practice16.clases.Persona;
+import dev.j3c.practice16.utilidades.Utilidades;
+
 public class Principal {
 
     private static String getMensajePorIMC(int imc) {

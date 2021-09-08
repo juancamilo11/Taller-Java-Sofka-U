@@ -24,7 +24,7 @@ public class MainClass {
             case "jueves":    message = "Jueves es un día laboral";     break;
             case "viernes":   message = "Viernes es un día laboral";    break;
             case "sabado":    message = "Sabado NO es un día laboral";  break;
-            case "Domingo":   message = "Domingo NO es un día laboral"; break;
+            case "domingo":   message = "Domingo NO es un día laboral"; break;
             default:          message = "Día ingresado no válido";      break;
         }
         return message;

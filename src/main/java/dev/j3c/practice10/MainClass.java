@@ -7,8 +7,8 @@ public class MainClass {
     private static String inputSentence() {
         Scanner reader = new Scanner(System.in);
         System.out.print("Ingrese una frase para eliminarle los espacios: ");
-        String dayOfTheWeek = reader.nextLine();
-        return (dayOfTheWeek);
+        String quote = reader.nextLine();
+        return (quote);
     }
 
     private static String removeBlanks(String dayOfTheWeek) {

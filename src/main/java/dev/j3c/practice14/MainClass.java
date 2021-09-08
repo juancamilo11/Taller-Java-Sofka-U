@@ -9,10 +9,17 @@ import java.util.Scanner;
 public class MainClass {
 
     private static Integer inputNumber() {
-        Scanner reader = new Scanner(System.in);
-        System.out.print("Ingrese un número entero menor que 1000: ");
-        Integer number = reader.nextInt();   //Wrapper class (Autoboxing operation)
-        return number;
+        Integer num = null;   //Wrapper class (Autoboxing operation)
+        do {
+            try {
+                num = Integer.parseInt(JOptionPane.showInputDialog("Ingrese un número entero menor que 1000: "));
+            } catch (NumberFormatException e1) {
+                JOptionPane.showMessageDialog(null,"Exception caught: " + e1.getMessage());
+            } catch(InputMismatchException e2) {
+                JOptionPane.showMessageDialog(null,"Exception caught: " + e2.getMessage());
+            }
+        } while(num == null || num >= 1000);
+        return num;
     }
 
     private static void printNumbers(int num) {

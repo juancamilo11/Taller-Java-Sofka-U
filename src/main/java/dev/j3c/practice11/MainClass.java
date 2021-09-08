@@ -25,12 +25,12 @@ public class MainClass {
     public static void main(String[] args) {
         String sentence = MainClass.inputSentence();
         if(sentence.length() > 0) {
-            System.out.println("La longitud de la cadena es, ahora sin espacios es: " + sentence.length());
+            System.out.println("\nLa longitud de la cadena es, incluyendo los espacios es: " + sentence.length());
             System.out.println("La cantidad de 'a' en la cadena es: " + MainClass.getVowelCount(sentence,'a'));
-            System.out.println("La cantidad de 'a' en la cadena es: " + MainClass.getVowelCount(sentence,'e'));
-            System.out.println("La cantidad de 'a' en la cadena es: " + MainClass.getVowelCount(sentence,'i'));
-            System.out.println("La cantidad de 'a' en la cadena es: " + MainClass.getVowelCount(sentence,'o'));
-            System.out.println("La cantidad de 'a' en la cadena es: " + MainClass.getVowelCount(sentence,'u'));
+            System.out.println("La cantidad de 'e' en la cadena es: " + MainClass.getVowelCount(sentence,'e'));
+            System.out.println("La cantidad de 'i' en la cadena es: " + MainClass.getVowelCount(sentence,'i'));
+            System.out.println("La cantidad de 'o' en la cadena es: " + MainClass.getVowelCount(sentence,'o'));
+            System.out.println("La cantidad de 'u' en la cadena es: " + MainClass.getVowelCount(sentence,'u'));
         } else {
             System.out.println("Ingrese una cadena válida.");
         }

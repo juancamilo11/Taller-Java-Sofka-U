@@ -21,11 +21,11 @@ public class MainClass {
 
     private static String compareInputNumbers(double firstNumber, double secondNumber) {
         double difference = firstNumber - secondNumber;
-        String result = "The first number: " + firstNumber + " is greater than the second one: " + secondNumber;
+        String result = "The first number: " + firstNumber + " and the second number: " + secondNumber + " are the same";
         if(difference > 0) {
-            result = "The first number: " + firstNumber + " is less than the second one: " + secondNumber;
+            result = "The first number: " + firstNumber + " is greater than the second one: " + secondNumber;
         } else if (difference < 0) {
-            result = "The first number: " + firstNumber + " and the second number: " + secondNumber + " are the same.";
+            result = "The first number: " + firstNumber + " is less than the second number: " + secondNumber;
         }
         return result;
     }

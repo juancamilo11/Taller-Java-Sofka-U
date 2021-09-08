@@ -12,11 +12,10 @@ public class MainClass {
     }
 
     public static void compareWords(String fWord,String sWord) {
-        int vowelCount = 0;
         if(fWord.equals(sWord)){
-            System.out.println("Las palabras ingresadas son iguales");;
+            System.out.println("Las palabras ingresadas son iguales");
         } else {
-            int minLength = (fWord.length() < sWord.length())? fWord.length() : sWord.length();
+            int minLength = Math.min(fWord.length(), sWord.length());
             for (int index = 0; index < minLength; index++) {
                 if (fWord.charAt(index) != sWord.charAt(index)) {
                     System.out.println("\nEn el caracter número " + (index + 1) + ", las letras son diferentes: ");
