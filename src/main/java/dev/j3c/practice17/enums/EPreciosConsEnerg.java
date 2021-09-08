@@ -7,14 +7,7 @@ public enum EPreciosConsEnerg {
     precioTipoD('D',50),
     precioTipoE('E',30),
     precioTipoF('F',10);
-/*
-        letra   Precio
-        A  -->  100€
-        B  -->  80€
-        C  -->  60€
-        D  -->  50€
-        E  -->  30€
-        F  -->  10€*/
+
     private double precioAsociado;
     private char letra;
 
