@@ -11,6 +11,7 @@ Crear una clase llamada Serie con las siguientes características:
     ▪ Métodos get de todos los atributos, excepto de entregado.
     ▪ Métodos set de todos los atributos, excepto de entregado.
     ▪ Sobrescribe los métodos toString.
+
 Crearemos una clase Videojuego con las siguientes características:
 
 ▪ Sus atributos son titulo, horas estimadas, entregado, genero y compañia.
