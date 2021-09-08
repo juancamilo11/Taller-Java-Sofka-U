@@ -2,7 +2,7 @@ package dev.j3c.practice18.clases;
 
 import dev.j3c.practice18.interfaces.Entregable;
 
-public class Serie implements Entregable {
+public class Serie implements Entregable, Comparable<Object>{
     //atributos son título, numero de temporadas, entregado, género y creador.
     //Por defecto, el número de temporadas es de 3 temporadas y entregado false.
     //El resto de atributos serán valores por defecto según el tipo del atributo.
@@ -77,6 +77,11 @@ public class Serie implements Entregable {
 
     @Override
     public void devolver() {
+        this.entregado = false;
+    }
+
+    @Override
+    public void entregar() {
         this.entregado = true;
     }
 
@@ -86,17 +91,13 @@ public class Serie implements Entregable {
     }
 
     @Override
-    public Integer compareTo(Object a) {
-        Integer resultado = null;
-        if(a instanceof Videojuego) {
-            if(this.numTemporadas > ((Videojuego) a).getHorasEstimadas()) {
-                resultado = 1;
-            } else if(this.numTemporadas == ((Serie) a).getNumTemporadas()) {
-                resultado = 0;
-            } else {
-                resultado = -1;
-            }
+    public int compareTo(Object a) {
+        if(this.numTemporadas > ((Serie)a).getNumTemporadas()) {
+            return -1;
+        } else if(this.numTemporadas < ((Serie)a).getNumTemporadas()) {
+            return 1;
         }
-        return resultado;
+        return 0;
     }
+
 }

@@ -2,7 +2,7 @@ package dev.j3c.practice18.clases;
 
 import dev.j3c.practice18.interfaces.Entregable;
 
-public class Videojuego implements Entregable {
+public class Videojuego implements Entregable, Comparable<Object>{
     //▪ Sus atributos son titulo, horas estimadas, entregado, genero y compañia.
     //▪ Por defecto, las horas estimadas serán de 10 horas y entregado false. El resto de
     //    atributos serán valores por defecto según el tipo del atributo.
@@ -84,6 +84,11 @@ public class Videojuego implements Entregable {
 
     @Override
     public void devolver() {
+        this.entregado = false;
+    }
+
+    @Override
+    public void entregar() {
         this.entregado = true;
     }
 
@@ -93,17 +98,12 @@ public class Videojuego implements Entregable {
     }
 
     @Override
-    public Integer compareTo(Object a) {
-        Integer resultado = null;
-        if(a instanceof Serie) {
-            if(this.horasEstimadas > ((Serie) a).getNumTemporadas()) {
-                resultado = 1;
-            } else if(this.horasEstimadas == ((Serie) a).getNumTemporadas()) {
-                resultado = 0;
-            } else {
-                resultado = -1;
-            }
+    public int compareTo(Object a) {
+        if(this.horasEstimadas > ((Videojuego)a).getHorasEstimadas()) {
+            return -1;
+        } else if(this.horasEstimadas < ((Videojuego) a).getHorasEstimadas()) {
+            return 1;
         }
-        return resultado;
+        return 0;
     }
 }

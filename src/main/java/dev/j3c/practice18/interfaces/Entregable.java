@@ -10,6 +10,7 @@ public interface Entregable {
     //    la interfaz Comparable. Recuerda el uso de los casting de objetos.
 
     void devolver();
+    void entregar();
     boolean isEntregado();
-    Integer compareTo(Object a);
+    int compareTo(Object a);
 }
