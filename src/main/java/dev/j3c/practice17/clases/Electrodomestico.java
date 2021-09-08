@@ -2,6 +2,7 @@ package dev.j3c.practice17.clases;
 
 import dev.j3c.practice17.enums.EColoresElectrod;
 import dev.j3c.practice17.enums.EPreciosConsEnerg;
+import dev.j3c.practice17.enums.ETamanio;
 
 public class Electrodomestico {
     private double precioBase = 100;
@@ -56,8 +57,15 @@ public class Electrodomestico {
         }
     }
 
+    private double getAumentoTamanio() {
+        double aumentoTamanio = ETamanio.getPrecioPorTamanio(this.peso);
+        return aumentoTamanio;
+    }
+
     public double precioFinal() {
-        double precioFinal = this.precioBase + this.consumoEnergetico.getPrecioAsociado();
+        double precioFinal = this.precioBase + this.consumoEnergetico.getPrecioAsociado() + this.getAumentoTamanio();
         return precioFinal;
     }
+
+
 }
