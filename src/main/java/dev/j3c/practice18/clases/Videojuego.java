@@ -3,20 +3,12 @@ package dev.j3c.practice18.clases;
 import dev.j3c.practice18.interfaces.Entregable;
 
 public class Videojuego implements Entregable, Comparable<Object>{
-    //▪ Sus atributos son titulo, horas estimadas, entregado, genero y compañia.
-    //▪ Por defecto, las horas estimadas serán de 10 horas y entregado false. El resto de
-    //    atributos serán valores por defecto según el tipo del atributo.
 
     private String titulo;
     private int horasEstimadas = 10;
     private boolean entregado = false;
     private String genero;
     private String compania;
-
-    //▪ Los constructores que se implementaran serán:
-    //    ▪ Un constructor por defecto.
-    //    ▪ Un constructor con el titulo y horas estimadas. El resto por defecto.
-    //    ▪ Un constructor con todos los atributos, excepto de entregado.
 
     public Videojuego(){
     }
@@ -32,12 +24,6 @@ public class Videojuego implements Entregable, Comparable<Object>{
         this.genero = genero;
         this.compania = compania;
     }
-
-    //▪ Los métodos que se implementara serán:
-    //    ▪ Métodos get de todos los atributos, excepto de entregado.
-    //    ▪ Métodos set de todos los atributos, excepto de entregado.
-    //    ▪ Sobrescribe los métodos toString.
-
 
     public String getTitulo() {
         return this.titulo;

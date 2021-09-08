@@ -3,21 +3,14 @@ package dev.j3c.practice18.clases;
 import dev.j3c.practice18.interfaces.Entregable;
 
 public class Serie implements Entregable, Comparable<Object>{
-    //atributos son título, numero de temporadas, entregado, género y creador.
-    //Por defecto, el número de temporadas es de 3 temporadas y entregado false.
-    //El resto de atributos serán valores por defecto según el tipo del atributo.
+
     private String titulo;
     private int numTemporadas = 3;
     private boolean entregado = false;
     private String genero;
     private String creador;
 
-    //▪ Un constructor por defecto.
-    //    ▪ Un constructor con el titulo y creador. El resto por defecto.
-    //    ▪ Un constructor con todos los atributos, excepto de entregado.
-
     public Serie(){
-
     }
 
     public Serie(String titulo, String creador) {
@@ -67,11 +60,11 @@ public class Serie implements Entregable, Comparable<Object>{
     @Override
     public String toString() {
         return "Serie [" +
-                "titulo='" + titulo  +
+                "titulo='" + titulo  + '\'' +
                 ", numTemporadas=" + numTemporadas +
                 ", entregado=" + entregado +
-                ", genero='" + genero +
-                ", creador='" + creador +
+                ", genero='" + genero + '\'' +
+                ", creador='" + creador + '\'' +
                 ']';
     }
 
@@ -99,5 +92,4 @@ public class Serie implements Entregable, Comparable<Object>{
         }
         return 0;
     }
-
 }

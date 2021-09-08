@@ -1,8 +1,5 @@
 package dev.j3c.practice18;
 
-import dev.j3c.practice17.clases.Electrodomestico;
-import dev.j3c.practice17.clases.Lavadora;
-import dev.j3c.practice17.clases.Televisor;
 import dev.j3c.practice18.clases.Serie;
 import dev.j3c.practice18.clases.Videojuego;
 
@@ -35,7 +32,6 @@ public class Principal {
     private static void entregarSeries(Serie[] vecSeries) {
         vecSeries[1].entregar();
         vecSeries[2].entregar();
-        vecSeries[3].entregar();
     }
 
     private static void contarYDevolverVideojuegos(Videojuego[] vecVideojuegos) {
@@ -57,13 +53,12 @@ public class Principal {
                 numSeriesEntregadas++;
             }
         }
-        System.out.println("Se han devuelto " + numSeriesEntregadas + " videojuegos que se habían entregado anteriormente.");
+        System.out.println("\nSe han devuelto " + numSeriesEntregadas + " series que se habían entregado anteriormente.");
     }
-
 
     private static void serieMasTemporadas(Serie[] vecSeries) {
         Arrays.sort(vecSeries);
-        System.out.println("La serie con más temporadas es: " + vecSeries[0]);
+        System.out.println("\nLa serie con más temporadas es: " + vecSeries[0]);
     }
 
     private static void videoJuegoMasHEstimadas(Videojuego[] vecVideojuegos) {
@@ -72,12 +67,6 @@ public class Principal {
     }
 
     public static void main(String[] args) {
-        //▪ Crea dos arrays, uno de Series y otro de Videojuegos, de 5 posiciones cada uno.
-        //    ▪ Crea un objeto en cada posición del array, con los valores que desees, puedes usar distintos constructores.
-        //    ▪ Entrega algunos Videojuegos y Series con el método entregar().
-        //    ▪ Cuenta cuantos Series y Videojuegos hay entregados. Al contarlos, devuélvelos.
-        //    ▪ Por último, indica el Videojuego tiene más horas estimadas y la serie con mas temporadas. Muéstralos en pantalla con toda su información (usa el método toString()).
-
         Serie[] vecSeries = new Serie[5];
         Videojuego[] vecVideojuegos = new Videojuego[5];
 
@@ -92,6 +81,5 @@ public class Principal {
 
         Principal.serieMasTemporadas(vecSeries);
         Principal.videoJuegoMasHEstimadas(vecVideojuegos);
-
     }
 }
